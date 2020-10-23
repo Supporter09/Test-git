@@ -2,31 +2,31 @@ from Date import Date
 from card import Card
 
 class NormalCard(Card):
-    def __init__(self, user_id, user_name, last_date,all_money):
-        self.user_id = user_id
-        self.user_name = user_name
-        self.first_date = Date(1,2,2020)
-        self.last_date = last_date
-        self.all_money = all_money
+    def __init__(self, userId, userName, lastDate,allMoney):
+        self.userId = userId
+        self.userName = userName
+        self.firstDate = Date(1,2,2020)
+        self.lastDate = lastDate
+        self.allMoney = allMoney
 
     def addMoney(self, money):
-        self.all_money += money
-        return self.all_money
+        self.allMoney += money
+        return self.allMoney
     
     def removeAllMoney(self):
-        if getDifference(self.first_date, self.last_date) > 365:
-            self.all_money = 0
+        if getDifference(self.firstDate, self.last_date) > 365:
+            self.allMoney = 0
 
     def getUserAllMoney(self):
-        return self.all_money
+        return self.allMoney
     
     def printAllBasicCardData(self):
-        cardDetail = [self.user_id,self.user_name,self.last_date,self.all_money]
+        cardDetail = [self.userId,self.userName,self.lastDate,self.allMoney]
         return cardDetail
 
     def setLastDate(self,newLastDate):
-        self.last_date = new_last_date
+        self.lastDate = newLastDate
 
 
     def getUserMoneyDetail(self):
-        return self.all_money
+        return self.allMoney
