@@ -1,11 +1,11 @@
-from nhadat import trading
+from Trading import Trading
 
-class realEstate(trading):
-    def init(self, tradingCode, tradingDay,price, typeOfTrade, square):
+class RealEstate(Trading):
+    def __init__(self, trading_code, trading_day,price, type_of_trade, square):
         self.trading_code = str(trading_code)
         self.trading_day = trading_day
         self.price = price
-        self.type = str(typeOfTrade)
+        self.type = str(type_of_trade)
         self.square = square
 
 

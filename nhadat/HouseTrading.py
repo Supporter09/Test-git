@@ -1,13 +1,13 @@
-from nhadat import trading
+from Trading import Trading
 
-class houseTrading(trading):
-    def init(self, tradingCode, tradingDay,price, typeOfHouse, square,houseIndex):
-        self.trading_code = str(trading_code)
-        self.trading_day = trading_day
+class HouseTrading(Trading):
+    def __init__(self, tradingCode, tradingDay,price, typeOfHouse, square,houseIndex):
+        self.tradingCode = str(tradingCode)
+        self.tradingDay = tradingDay
         self.price = price
-        self.type = str(type_of_house)
+        self.type = str(typeOfHouse)
         self.square = square
-        self.house_index = house_index
+        self.houseIndex = houseIndex
 
 
     def getPriceWithoutVAT(self):
@@ -25,14 +25,15 @@ class houseTrading(trading):
         return paid
 
     def setData(self):
-        trading_day = str(input("type your trading day here (ex: 11/10/2020): "))
+        tradingDay = str(input("type your trading day here (ex: 11/10/2020): "))
         price = input("Type the price: ")
-        type_of_house = input("Type your type of trade btw cao cap(0) va biet thu(1):")
+        typeOfHouse = input("Type your type of trade btw cao cap(0) va biet thu(1):")
         square = input("Type square: ")
-        house_index = input("Type house index")
-        self.trading_code = str(trading_code)
-        self.trading_day = trading_day
+        houseIndex = input("Type house index")
+        self.tradingCode = str(tradingCode)
+        self.tradingDay = tradingDay
         self.price = price
-        self.type = str(type_of_house)
+        self.type = str(typeOfHouse)
         self.square = square
-        self.house_index = house_index
+        self.houseIndex = houseIndex
+
